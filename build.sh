@@ -1,0 +1,1 @@
+g++ showHead.cpp -o showHead `pkg-config --cflags --libs opencv`
