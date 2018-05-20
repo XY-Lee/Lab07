@@ -135,7 +135,7 @@ void ShowDetectFace( Img mainImg, CvSeq *&faces ) {
   if ( faces ) {
     for ( int i = 0 ; i < faces->total ; ++i ) {
       /* get openCV analysis faces' point */
-      /* hit : google CvRect、CvPoint */
+      /* hint : google CvRect、CvPoint */
       /* point1 is rectangle's left top point */
       /* point2 is rectangle's right bottom point */
       CvPoint point1, point2;
@@ -175,7 +175,7 @@ bool ChangeFace( CvSeq *faces, Img &mainImg, int faceNum, int headIndex ) {
   } // if
 
   /* get openCV analysis faces' point */
-  /* hit : google CvRect、CvPoint */
+  /* hint : google CvRect、CvPoint */
   CvPoint point;
   CvRect* rectangle = (CvRect*)cvGetSeqElem( faces, *** );
   point.*** = rectangle->*** ;
