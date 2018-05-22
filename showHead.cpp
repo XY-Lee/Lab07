@@ -177,13 +177,13 @@ bool ChangeFace( CvSeq *faces, Img &mainImg, int faceNum, int headIndex ) {
   /* get openCV analysis faces' point */
   /* hint : google CvRect、CvPoint */
   CvPoint point;
-  CvRect* rectangle = (CvRect*)cvGetSeqElem( faces, *** );
+  CvRect* rectangle = (CvRect*)cvGetSeqElem( faces, *** ); // get No.*** face
   point.*** = rectangle->*** ;
   point.*** = rectangle->***;
   
   Mat reScaleTemp;
   Mat imgROI ;
-  resize( gAniHead[ *** ].img, reScaleTemp, Size( rectangle->***, rectangle->*** ) ) ; // make head's size to rectangle's size
+  resize( gAniHead[ *** ].img, reScaleTemp, Size( rectangle->***, rectangle->*** ) ) ; // make No.*** head's size to rectangle's size
   /* make reSized animal head copy to face */
   // get the face area's memory data to imgROI from point in order to set reSized animal head's area
   imgROI = mainImg.img( Rect( point.***, point.***, reScaleTemp.cols, reScaleTemp.rows ) ); 
